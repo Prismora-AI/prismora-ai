@@ -79,10 +79,10 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
               <Globe className="w-6 h-6 text-primary-foreground" />
             </div>
-            AI Powered Solutions
+            Prismora AI
           </DialogTitle>
           <p className="text-muted-foreground text-lg">
-            Transforming businesses with cutting-edge AI and cloud technologies
+            Next-generation artificial intelligence company solving real-world problems
           </p>
         </DialogHeader>
         
