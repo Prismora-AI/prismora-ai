@@ -17,8 +17,13 @@ import {
   ArrowRight,
   Zap,
   Shield,
-  Layers
+  Layers,
+  Info,
+  Users
 } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import TeamMemberModal from "@/components/TeamMemberModal";
+import CompanyModal from "@/components/CompanyModal";
 
 export default function Index() {
   const [formData, setFormData] = useState({
@@ -27,6 +32,10 @@ export default function Index() {
     phone: "",
     requirements: ""
   });
+  
+  const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
+  const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
+  const [isCompanyModalOpen, setIsCompanyModalOpen] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -39,12 +48,36 @@ export default function Index() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     // Handle form submission
+    alert("Thank you for your message! We'll get back to you soon.");
+    setFormData({ name: "", email: "", phone: "", requirements: "" });
+  };
+
+  const handleNavigate = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for navbar height
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleTeamMemberClick = (memberId: string) => {
+    setSelectedTeamMember({ id: memberId });
+    setIsTeamModalOpen(true);
+  };
+
+  const handleCompanyInfoClick = () => {
+    setIsCompanyModalOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Navbar onNavigate={handleNavigate} />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-20">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/10 animate-pulse-slow"></div>
@@ -66,30 +99,43 @@ export default function Index() {
             Future-ready AI, Cloud, and Web Solutions
           </p>
           
-          <Button 
-            size="lg" 
-            className="group px-8 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
-          >
-            Get a Free Quote
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button 
+              size="lg" 
+              onClick={() => handleNavigate("contact")}
+              className="group px-8 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+            >
+              Get a Free Quote
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={handleCompanyInfoClick}
+              className="group px-8 py-6 text-lg font-semibold border-primary/50 hover:bg-primary/10 transition-all duration-300"
+            >
+              <Info className="mr-2 w-5 h-5" />
+              Learn More
+            </Button>
+          </div>
           
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Bot className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">AI-Powered</h3>
               <p className="text-sm text-muted-foreground">Advanced AI integration</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
+            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Cloud className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Cloud-Native</h3>
               <p className="text-sm text-muted-foreground">Scalable infrastructure</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
+            <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
@@ -101,71 +147,110 @@ export default function Index() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-24 px-4 bg-card/30">
+      <section id="about" className="py-24 px-4 bg-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
-              <Star className="w-4 h-4 mr-2" />
+              <Users className="w-4 h-4 mr-2" />
               About Us
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet Our Team</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
               We are a young tech company specializing in AI, Cloud, and Web/App solutions. 
               Our mission is to help businesses grow with scalable, AI-powered technology.
             </p>
+            <Button 
+              variant="outline" 
+              onClick={handleCompanyInfoClick}
+              className="group border-primary/50 hover:bg-primary/10"
+            >
+              <Info className="mr-2 w-4 h-4" />
+              Learn More About Our Company
+              <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
+            <Card 
+              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
+              onClick={() => handleTeamMemberClick("ai-developer")}
+            >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Code className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl">Full Stack AI Developer</CardTitle>
-                <CardDescription>Expert in ML, NLP, and AI-powered features</CardDescription>
+                <CardTitle className="text-xl">Alex Chen</CardTitle>
+                <CardDescription>Full Stack AI Developer</CardDescription>
+                <p className="text-sm text-muted-foreground">Expert in ML, NLP, and AI-powered features</p>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center">
+                <div className="flex flex-wrap gap-2 justify-center mb-4">
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">TensorFlow</Badge>
                   <Badge variant="secondary">NLP</Badge>
                   <Badge variant="secondary">React</Badge>
                 </div>
+                <div className="text-center">
+                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                    View Profile
+                    <ChevronRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
+            <Card 
+              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
+              onClick={() => handleTeamMemberClick("cloud-developer")}
+            >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Cloud className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl">Cloud Developer</CardTitle>
-                <CardDescription>Specialist in AWS, GCP, Azure, and deployment</CardDescription>
+                <CardTitle className="text-xl">Sarah Kim</CardTitle>
+                <CardDescription>Cloud Developer</CardDescription>
+                <p className="text-sm text-muted-foreground">Specialist in AWS, GCP, Azure, and deployment</p>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center">
+                <div className="flex flex-wrap gap-2 justify-center mb-4">
                   <Badge variant="secondary">AWS</Badge>
                   <Badge variant="secondary">Docker</Badge>
                   <Badge variant="secondary">Kubernetes</Badge>
                   <Badge variant="secondary">DevOps</Badge>
                 </div>
+                <div className="text-center">
+                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                    View Profile
+                    <ChevronRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
+            <Card 
+              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
+              onClick={() => handleTeamMemberClick("web-developer")}
+            >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Layers className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl">Web Developer</CardTitle>
-                <CardDescription>Skilled in React, Next.js, and modern web platforms</CardDescription>
+                <CardTitle className="text-xl">Mike Rodriguez</CardTitle>
+                <CardDescription>Web Developer</CardDescription>
+                <p className="text-sm text-muted-foreground">Skilled in React, Next.js, and modern web platforms</p>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center">
+                <div className="flex flex-wrap gap-2 justify-center mb-4">
                   <Badge variant="secondary">React</Badge>
                   <Badge variant="secondary">Next.js</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">Tailwind</Badge>
+                </div>
+                <div className="text-center">
+                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                    View Profile
+                    <ChevronRight className="ml-2 w-4 h-4" />
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -174,7 +259,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4">
+      <section id="services" className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -248,7 +333,7 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-24 px-4 bg-card/30">
+      <section id="projects" className="py-24 px-4 bg-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -314,7 +399,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-4">
+      <section id="contact" className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -426,6 +511,21 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Modals */}
+      <TeamMemberModal
+        member={selectedTeamMember}
+        isOpen={isTeamModalOpen}
+        onClose={() => {
+          setIsTeamModalOpen(false);
+          setSelectedTeamMember(null);
+        }}
+      />
+      
+      <CompanyModal
+        isOpen={isCompanyModalOpen}
+        onClose={() => setIsCompanyModalOpen(false)}
+      />
     </div>
   );
 }
