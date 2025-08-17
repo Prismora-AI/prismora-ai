@@ -170,10 +170,10 @@ export default function Index() {
               <Users className="w-4 h-4 mr-2" />
               About Us
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet Our Founding Team</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
-              We are a young tech company specializing in AI, Cloud, and Web/App solutions. 
-              Our mission is to help businesses grow with scalable, AI-powered technology.
+              Prismora AI is a next-generation artificial intelligence company founded with a vision to solve real-world problems
+              through innovation, technology, and scalable AI-powered solutions.
             </p>
             <Button 
               variant="outline" 
