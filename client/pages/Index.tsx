@@ -725,8 +725,8 @@ export default function Index() {
               <div className="mt-8 pt-8 border-t border-border">
                 <div className="text-center">
                   <p className="text-muted-foreground mb-4">Or reach us directly at:</p>
-                  <a href="mailto:contact@aipoweredsolutions.com" className="text-primary hover:underline font-medium">
-                    contact@aipoweredsolutions.com
+                  <a href="mailto:contact@prismora.tech" className="text-primary hover:underline font-medium">
+                    contact@prismora.tech
                   </a>
                 </div>
               </div>
