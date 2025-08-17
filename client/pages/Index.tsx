@@ -44,6 +44,8 @@ export default function Index() {
   const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
   const [isCompanyModalOpen, setIsCompanyModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
