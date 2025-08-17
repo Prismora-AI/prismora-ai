@@ -287,7 +287,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
@@ -340,6 +340,34 @@ export default function Index() {
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
                   Intelligent chatbots, recommendation systems, and automation powered by AI.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <Settings className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Post-Launch Maintenance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center">
+                  Ongoing support, updates, bug fixes, and performance optimization for your applications.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <MessageSquare className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Social Media Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center">
+                  Complete social media strategy, content creation, and community management for your brand.
                 </p>
               </CardContent>
             </Card>
