@@ -54,12 +54,12 @@ const teamMembers: Record<string, TeamMember> = {
     email: "vandana@prismora.tech",
     github: "vandana-kumari",
     linkedin: "vandana-kumari-ai",
-    bio: "Vandana is the visionary founder of Prismora AI with a B.Tech in Computer Science & Engineering. She is passionate about building end-to-end AI systems, merging machine learning, deep learning, and software engineering to create impactful solutions that solve real-world problems.",
+    bio: "Vandana is the visionary founder of Prismora AI with a B.Tech in Computer Science & Engineering. With 2 years of individual experience, she is passionate about building end-to-end AI systems, merging machine learning, deep learning, and software engineering to create impactful solutions that solve real-world problems.",
     achievements: [
-      "Founded Prismora AI with innovative vision",
-      "Expert in end-to-end AI system development",
+      "Founded Prismora AI in August 2024",
+      "2 years of AI development experience",
       "B.Tech in Computer Science & Engineering",
-      "Led development of multiple AI-powered solutions"
+      "Built 15+ individual AI projects"
     ],
     skillLevels: [
       { name: "Python", level: 95 },
