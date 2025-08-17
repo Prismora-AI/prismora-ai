@@ -397,7 +397,7 @@ export default function Index() {
               <p className="text-sm text-muted-foreground">Successfully delivered projects</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-blue-500/10 border border-blue-500/20">
-              <ProgressIcon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+              <Activity className="w-8 h-8 text-blue-400 mx-auto mb-3" />
               <h3 className="font-semibold text-blue-400 mb-1">In Progress</h3>
               <p className="text-sm text-muted-foreground">Currently under development</p>
             </div>
