@@ -83,12 +83,12 @@ const teamMembers: Record<string, TeamMember> = {
     email: "shivam@prismora.tech",
     github: "shivam-singh-cloud",
     linkedin: "shivam-singh-devops",
-    bio: "Shivam is a co-founder of Prismora AI with a B.Tech in Computer Science & Engineering. He specializes in cloud architecture and DevOps, ensuring Prismora AI solutions are secure, scalable, and future-ready with expertise in modern cloud platforms.",
+    bio: "Shivam is a co-founder of Prismora AI with a B.Tech in Computer Science & Engineering. With 2 years of individual experience in cloud technologies, he specializes in cloud architecture and DevOps, ensuring Prismora AI solutions are secure, scalable, and future-ready.",
     achievements: [
-      "Co-founded Prismora AI",
-      "Expert in cloud architecture design",
+      "Co-founded Prismora AI in August 2024",
+      "2 years of cloud engineering experience",
       "B.Tech in Computer Science & Engineering",
-      "Built scalable infrastructure for AI applications"
+      "Completed 12+ individual cloud projects"
     ],
     skillLevels: [
       { name: "AWS", level: 95 },
