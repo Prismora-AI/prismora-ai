@@ -114,7 +114,7 @@ const teamMembers: Record<string, TeamMember> = {
     linkedin: "anshuman-sharma-dev",
     bio: "Anshuman is a co-founder of Prismora AI with a Master of Computer Applications (MCA). With 2 years of individual experience in full-stack development, he bridges front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
     achievements: [
-      "Co-founded Prismora AI in August 2024",
+      "Co-founded Prismora AI in August 2025",
       "Master of Computer Applications (MCA)",
       "2 years of full-stack development experience",
       "Built 18+ individual full-stack applications"
