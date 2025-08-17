@@ -108,11 +108,11 @@ export default function Index() {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-6 animate-gradient bg-300%">
-            AI Powered Solutions
+            Prismora AI
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Future-ready AI, Cloud, and Web Solutions
+            Next-generation AI solutions for real-world problems
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
