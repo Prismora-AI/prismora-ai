@@ -66,7 +66,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
               onClick={() => handleNavClick("hero")}
               className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
             >
-              AI Powered Solutions
+              Prismora AI
             </button>
           </div>
 
