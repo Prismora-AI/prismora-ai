@@ -4,14 +4,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Code, 
-  Cloud, 
-  Smartphone, 
-  Bot, 
-  ChevronRight, 
-  Mail, 
-  Linkedin, 
+import {
+  Code,
+  Cloud,
+  Smartphone,
+  Bot,
+  ChevronRight,
+  Mail,
+  Linkedin,
   Github,
   Star,
   ArrowRight,
@@ -19,11 +19,19 @@ import {
   Shield,
   Layers,
   Info,
-  Users
+  Users,
+  Settings,
+  MessageSquare,
+  CheckCircle,
+  Clock,
+  MessageCircle,
+  Wrench,
+  Progress as ProgressIcon
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamMemberModal from "@/components/TeamMemberModal";
 import CompanyModal from "@/components/CompanyModal";
+import ProjectModal from "@/components/ProjectModal";
 
 export default function Index() {
   const [formData, setFormData] = useState({
