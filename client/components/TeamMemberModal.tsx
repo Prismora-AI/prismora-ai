@@ -1,19 +1,24 @@
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { 
-  Code, 
-  Cloud, 
-  Layers, 
-  Github, 
-  Linkedin, 
+import {
+  Code,
+  Cloud,
+  Layers,
+  Github,
+  Linkedin,
   Mail,
   Star,
   Award,
   Calendar,
-  MapPin
+  MapPin,
 } from "lucide-react";
 
 interface TeamMember {
@@ -47,7 +52,14 @@ const teamMembers: Record<string, TeamMember> = {
     role: "Founder & Full Stack AI Engineer",
     description: "Expert in building end-to-end AI systems",
     icon: Code,
-    skills: ["Python", "Machine Learning", "Deep Learning", "AI Systems", "TensorFlow", "PyTorch"],
+    skills: [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "AI Systems",
+      "TensorFlow",
+      "PyTorch",
+    ],
     experience: "2 Years",
     location: "India",
     projects: 15,
@@ -59,7 +71,7 @@ const teamMembers: Record<string, TeamMember> = {
       "Founded Prismora AI in August 2025",
       "2 years of AI development experience",
       "B.Tech in Computer Science & Engineering",
-      "Built 15+ individual AI projects"
+      "Built 15+ individual AI projects",
     ],
     skillLevels: [
       { name: "Python", level: 95 },
@@ -67,8 +79,8 @@ const teamMembers: Record<string, TeamMember> = {
       { name: "Deep Learning", level: 95 },
       { name: "AI Systems", level: 92 },
       { name: "TensorFlow", level: 90 },
-      { name: "Software Engineering", level: 88 }
-    ]
+      { name: "Software Engineering", level: 88 },
+    ],
   },
   "shivam-singh": {
     id: "shivam-singh",
@@ -76,7 +88,14 @@ const teamMembers: Record<string, TeamMember> = {
     role: "Co-founder & Cloud Engineer",
     description: "Specialist in cloud architecture and DevOps",
     icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "DevOps", "Cloud Architecture", "Infrastructure"],
+    skills: [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "DevOps",
+      "Cloud Architecture",
+      "Infrastructure",
+    ],
     experience: "2 Years",
     location: "India",
     projects: 12,
@@ -88,7 +107,7 @@ const teamMembers: Record<string, TeamMember> = {
       "Co-founded Prismora AI in August 2025",
       "2 years of cloud engineering experience",
       "B.Tech in Computer Science & Engineering",
-      "Completed 12+ individual cloud projects"
+      "Completed 12+ individual cloud projects",
     ],
     skillLevels: [
       { name: "AWS", level: 95 },
@@ -96,8 +115,8 @@ const teamMembers: Record<string, TeamMember> = {
       { name: "Docker", level: 95 },
       { name: "DevOps", level: 92 },
       { name: "Cloud Architecture", level: 88 },
-      { name: "Infrastructure", level: 85 }
-    ]
+      { name: "Infrastructure", level: 85 },
+    ],
   },
   "anshuman-sharma": {
     id: "anshuman-sharma",
@@ -105,7 +124,14 @@ const teamMembers: Record<string, TeamMember> = {
     role: "Co-founder & Full Stack Engineer",
     description: "Expert in front-end and back-end systems",
     icon: Layers,
-    skills: ["React", "Node.js", "Full Stack", "TypeScript", "MongoDB", "API Development"],
+    skills: [
+      "React",
+      "Node.js",
+      "Full Stack",
+      "TypeScript",
+      "MongoDB",
+      "API Development",
+    ],
     experience: "2 Years",
     location: "India",
     projects: 18,
@@ -117,7 +143,7 @@ const teamMembers: Record<string, TeamMember> = {
       "Co-founded Prismora AI in August 2025",
       "Master of Computer Applications (MCA)",
       "2 years of full-stack development experience",
-      "Built 18+ individual full-stack applications"
+      "Built 18+ individual full-stack applications",
     ],
     skillLevels: [
       { name: "React", level: 95 },
@@ -125,12 +151,16 @@ const teamMembers: Record<string, TeamMember> = {
       { name: "TypeScript", level: 90 },
       { name: "Full Stack Development", level: 95 },
       { name: "API Development", level: 88 },
-      { name: "UI/UX Design", level: 85 }
-    ]
-  }
+      { name: "UI/UX Design", level: 85 },
+    ],
+  },
 };
 
-export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProps) {
+export default function TeamMemberModal({
+  member,
+  isOpen,
+  onClose,
+}: TeamMemberModalProps) {
   if (!member) return null;
 
   const memberData = teamMembers[member.id] || member;
@@ -147,12 +177,14 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
             {memberData.name}
           </DialogTitle>
         </DialogHeader>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
           {/* Left Column - Basic Info */}
           <div className="space-y-6">
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
-              <h3 className="font-semibold text-lg mb-4 text-primary">{memberData.role}</h3>
+              <h3 className="font-semibold text-lg mb-4 text-primary">
+                {memberData.role}
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-sm">
                   <Calendar className="w-4 h-4 text-muted-foreground" />
@@ -173,18 +205,30 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start"
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   {memberData.email}
                 </Button>
                 {memberData.github && (
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     {memberData.github}
                   </Button>
                 )}
                 {memberData.linkedin && (
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     {memberData.linkedin}
                   </Button>
@@ -223,7 +267,9 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
                       <span>{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                      <span className="text-muted-foreground">
+                        {skill.level}%
+                      </span>
                     </div>
                     <Progress value={skill.level} className="h-2" />
                   </div>

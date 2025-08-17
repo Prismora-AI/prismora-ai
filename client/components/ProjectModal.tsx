@@ -1,22 +1,27 @@
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  Users, 
-  Code, 
+import {
+  Calendar,
+  Clock,
+  CheckCircle,
+  Users,
+  Code,
   Rocket,
   GitBranch,
   FileText,
   Target,
   TrendingUp,
   AlertCircle,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
 
 interface ProjectData {
@@ -49,142 +54,210 @@ const projects: Record<string, ProjectData> = {
   "fintech-app": {
     id: "fintech-app",
     title: "AI-Powered Fintech App",
-    description: "Intelligent financial management with AI-driven insights and automated trading recommendations.",
+    description:
+      "Intelligent financial management with AI-driven insights and automated trading recommendations.",
     status: "in-progress",
     progress: 75,
     client: "FinanceFlow Inc.",
     startDate: "2024-01-15",
     endDate: "2024-04-30",
     team: ["Alex Chen", "Sarah Kim", "Mike Rodriguez"],
-    technologies: ["React Native", "TensorFlow", "AWS", "Blockchain", "Node.js", "PostgreSQL"],
+    technologies: [
+      "React Native",
+      "TensorFlow",
+      "AWS",
+      "Blockchain",
+      "Node.js",
+      "PostgreSQL",
+    ],
     features: [
       "AI-powered portfolio analysis",
       "Real-time market predictions",
       "Automated trading recommendations",
       "Risk assessment algorithms",
       "Secure blockchain transactions",
-      "Mobile-first design"
+      "Mobile-first design",
     ],
     milestones: [
-      { name: "Project Setup & Architecture", completed: true, date: "2024-01-30" },
-      { name: "User Authentication System", completed: true, date: "2024-02-15" },
+      {
+        name: "Project Setup & Architecture",
+        completed: true,
+        date: "2024-01-30",
+      },
+      {
+        name: "User Authentication System",
+        completed: true,
+        date: "2024-02-15",
+      },
       { name: "AI Model Integration", completed: true, date: "2024-03-01" },
-      { name: "Trading Algorithm Development", completed: false, date: "2024-03-30" },
-      { name: "Security Testing & Compliance", completed: false, date: "2024-04-15" },
-      { name: "Beta Testing & Launch", completed: false, date: "2024-04-30" }
+      {
+        name: "Trading Algorithm Development",
+        completed: false,
+        date: "2024-03-30",
+      },
+      {
+        name: "Security Testing & Compliance",
+        completed: false,
+        date: "2024-04-15",
+      },
+      { name: "Beta Testing & Launch", completed: false, date: "2024-04-30" },
     ],
     challenges: [
       "Integrating complex AI models with real-time data",
       "Meeting financial regulatory compliance requirements",
-      "Optimizing mobile performance for large datasets"
+      "Optimizing mobile performance for large datasets",
     ],
     budget: "$150,000",
-    timeline: "4 months"
+    timeline: "4 months",
   },
   "ecommerce-platform": {
     id: "ecommerce-platform",
     title: "Custom E-Commerce Platform",
-    description: "Scalable e-commerce solution with AI-powered product recommendations and advanced analytics.",
+    description:
+      "Scalable e-commerce solution with AI-powered product recommendations and advanced analytics.",
     status: "in-progress",
     progress: 60,
     client: "ShopSmart Ltd.",
     startDate: "2024-02-01",
     endDate: "2024-05-15",
     team: ["Mike Rodriguez", "Sarah Kim"],
-    technologies: ["Next.js", "Shopify API", "Stripe", "PostgreSQL", "Redis", "AWS"],
+    technologies: [
+      "Next.js",
+      "Shopify API",
+      "Stripe",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+    ],
     features: [
       "AI product recommendations",
       "Advanced analytics dashboard",
       "Multi-vendor support",
       "Inventory management",
       "Payment gateway integration",
-      "Mobile responsive design"
+      "Mobile responsive design",
     ],
     milestones: [
-      { name: "Platform Architecture Design", completed: true, date: "2024-02-15" },
-      { name: "User Interface Development", completed: true, date: "2024-03-01" },
+      {
+        name: "Platform Architecture Design",
+        completed: true,
+        date: "2024-02-15",
+      },
+      {
+        name: "User Interface Development",
+        completed: true,
+        date: "2024-03-01",
+      },
       { name: "Payment Integration", completed: true, date: "2024-03-15" },
-      { name: "AI Recommendation Engine", completed: false, date: "2024-04-01" },
+      {
+        name: "AI Recommendation Engine",
+        completed: false,
+        date: "2024-04-01",
+      },
       { name: "Analytics Dashboard", completed: false, date: "2024-04-30" },
-      { name: "Testing & Deployment", completed: false, date: "2024-05-15" }
+      { name: "Testing & Deployment", completed: false, date: "2024-05-15" },
     ],
     budget: "$120,000",
-    timeline: "3.5 months"
+    timeline: "3.5 months",
   },
   "healthcare-app": {
     id: "healthcare-app",
     title: "HealthTracker Mobile App",
-    description: "Comprehensive health monitoring app with AI-powered health insights and telemedicine features.",
+    description:
+      "Comprehensive health monitoring app with AI-powered health insights and telemedicine features.",
     status: "completed",
     progress: 100,
     client: "MedTech Solutions",
     startDate: "2023-09-01",
     endDate: "2023-12-15",
     team: ["Alex Chen", "Mike Rodriguez"],
-    technologies: ["Flutter", "Firebase", "TensorFlow Lite", "Python", "Google Cloud"],
+    technologies: [
+      "Flutter",
+      "Firebase",
+      "TensorFlow Lite",
+      "Python",
+      "Google Cloud",
+    ],
     features: [
       "Health metrics tracking",
       "AI symptom analyzer",
       "Telemedicine integration",
       "Medication reminders",
       "Doctor appointment scheduling",
-      "Health report generation"
+      "Health report generation",
     ],
     milestones: [
       { name: "App Design & Prototyping", completed: true, date: "2023-09-15" },
-      { name: "Core Features Development", completed: true, date: "2023-10-30" },
+      {
+        name: "Core Features Development",
+        completed: true,
+        date: "2023-10-30",
+      },
       { name: "AI Integration", completed: true, date: "2023-11-15" },
-      { name: "Testing & Quality Assurance", completed: true, date: "2023-12-01" },
-      { name: "App Store Deployment", completed: true, date: "2023-12-15" }
+      {
+        name: "Testing & Quality Assurance",
+        completed: true,
+        date: "2023-12-01",
+      },
+      { name: "App Store Deployment", completed: true, date: "2023-12-15" },
     ],
     achievements: [
       "50,000+ downloads in first month",
       "4.8/5 star rating on app stores",
       "Featured in Google Play Store",
-      "HIPAA compliance certified"
+      "HIPAA compliance certified",
     ],
     budget: "$85,000",
-    timeline: "3.5 months"
+    timeline: "3.5 months",
   },
   "ai-chatbot": {
     id: "ai-chatbot",
     title: "Enterprise AI Chatbot",
-    description: "Intelligent customer service chatbot with natural language processing and multi-language support.",
+    description:
+      "Intelligent customer service chatbot with natural language processing and multi-language support.",
     status: "discussion",
     progress: 0,
     client: "Global Corp Inc.",
     startDate: "2024-04-01",
     endDate: "2024-07-30",
     team: ["Alex Chen", "Sarah Kim"],
-    technologies: ["Python", "OpenAI GPT", "React", "Node.js", "MongoDB", "Docker"],
+    technologies: [
+      "Python",
+      "OpenAI GPT",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+    ],
     features: [
       "Natural language understanding",
       "Multi-language support",
       "Integration with existing CRM",
       "Analytics and reporting",
       "Voice message support",
-      "24/7 availability"
+      "24/7 availability",
     ],
     milestones: [
       { name: "Requirements Analysis", completed: false, date: "2024-04-15" },
       { name: "Chatbot Training", completed: false, date: "2024-05-15" },
       { name: "CRM Integration", completed: false, date: "2024-06-15" },
       { name: "Testing & Optimization", completed: false, date: "2024-07-15" },
-      { name: "Deployment & Training", completed: false, date: "2024-07-30" }
+      { name: "Deployment & Training", completed: false, date: "2024-07-30" },
     ],
     nextSteps: [
       "Finalize project requirements with client",
       "Set up development environment",
       "Begin chatbot training data collection",
-      "Design conversation flows"
+      "Design conversation flows",
     ],
     budget: "$95,000",
-    timeline: "4 months"
+    timeline: "4 months",
   },
   "restaurant-app": {
     id: "restaurant-app",
     title: "Restaurant Management System",
-    description: "Complete restaurant management solution with online ordering, inventory, and staff management.",
+    description:
+      "Complete restaurant management solution with online ordering, inventory, and staff management.",
     status: "maintenance",
     progress: 100,
     client: "Bistro Chain",
@@ -198,22 +271,22 @@ const projects: Record<string, ProjectData> = {
       "Staff scheduling",
       "Customer loyalty program",
       "Analytics dashboard",
-      "Multi-location support"
+      "Multi-location support",
     ],
     milestones: [
       { name: "System Design", completed: true, date: "2023-06-15" },
       { name: "Core Development", completed: true, date: "2023-08-30" },
-      { name: "Testing & Deployment", completed: true, date: "2023-10-15" }
+      { name: "Testing & Deployment", completed: true, date: "2023-10-15" },
     ],
     achievements: [
       "40% increase in online orders",
       "25% reduction in food waste",
       "Deployed across 15 restaurant locations",
-      "99.9% uptime maintained"
+      "99.9% uptime maintained",
     ],
     budget: "$75,000",
-    timeline: "4.5 months"
-  }
+    timeline: "4.5 months",
+  },
 };
 
 const getStatusColor = (status: string) => {
@@ -231,7 +304,11 @@ const getStatusColor = (status: string) => {
   }
 };
 
-export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+export default function ProjectModal({
+  project,
+  isOpen,
+  onClose,
+}: ProjectModalProps) {
   if (!project) return null;
 
   const projectData = projects[project.id] || project;
@@ -252,11 +329,13 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             </Badge>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Calendar className="w-4 h-4" />
-              <span>{projectData.startDate} - {projectData.endDate || "Ongoing"}</span>
+              <span>
+                {projectData.startDate} - {projectData.endDate || "Ongoing"}
+              </span>
             </div>
           </div>
         </DialogHeader>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
           {/* Left Column - Project Overview */}
           <div className="space-y-6">
@@ -267,15 +346,21 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-medium mb-2">Client</h4>
-                  <p className="text-sm text-muted-foreground">{projectData.client}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {projectData.client}
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">Budget</h4>
-                  <p className="text-sm text-muted-foreground">{projectData.budget}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {projectData.budget}
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">Timeline</h4>
-                  <p className="text-sm text-muted-foreground">{projectData.timeline}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {projectData.timeline}
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">Progress</h4>
@@ -300,7 +385,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               <CardContent>
                 <div className="space-y-2">
                   {projectData.team.map((member) => (
-                    <div key={member} className="flex items-center gap-2 text-sm">
+                    <div
+                      key={member}
+                      className="flex items-center gap-2 text-sm"
+                    >
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>{member}</span>
                     </div>
@@ -372,18 +460,24 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   {projectData.milestones.map((milestone, index) => (
                     <div key={index} className="flex gap-4">
                       <div className="flex flex-col items-center">
-                        <div className={`w-3 h-3 rounded-full ${
-                          milestone.completed ? "bg-green-400" : "bg-gray-400"
-                        }`}></div>
+                        <div
+                          className={`w-3 h-3 rounded-full ${
+                            milestone.completed ? "bg-green-400" : "bg-gray-400"
+                          }`}
+                        ></div>
                         {index < projectData.milestones.length - 1 && (
                           <div className="w-px h-8 bg-border mt-2"></div>
                         )}
                       </div>
                       <div className="flex-1 pb-4">
                         <div className="flex items-center gap-3 mb-1">
-                          <h4 className={`font-medium ${
-                            milestone.completed ? "text-foreground" : "text-muted-foreground"
-                          }`}>
+                          <h4
+                            className={`font-medium ${
+                              milestone.completed
+                                ? "text-foreground"
+                                : "text-muted-foreground"
+                            }`}
+                          >
                             {milestone.name}
                           </h4>
                           <Badge variant="outline" className="text-xs">
@@ -409,9 +503,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 <CardContent>
                   <ul className="space-y-2">
                     {projectData.achievements.map((achievement, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-sm"
+                      >
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{achievement}</span>
+                        <span className="text-muted-foreground">
+                          {achievement}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -430,9 +529,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 <CardContent>
                   <ul className="space-y-2">
                     {projectData.challenges.map((challenge, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-sm"
+                      >
                         <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{challenge}</span>
+                        <span className="text-muted-foreground">
+                          {challenge}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -451,7 +555,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 <CardContent>
                   <ul className="space-y-2">
                     {projectData.nextSteps.map((step, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-sm"
+                      >
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
                         <span className="text-muted-foreground">{step}</span>
                       </li>

@@ -1,12 +1,17 @@
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { 
-  Target, 
-  Users, 
-  Calendar, 
+import {
+  Target,
+  Users,
+  Calendar,
   Award,
   TrendingUp,
   Globe,
@@ -14,7 +19,7 @@ import {
   Lightbulb,
   Shield,
   Zap,
-  Star
+  Star,
 } from "lucide-react";
 
 interface CompanyModalProps {
@@ -34,32 +39,57 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "We stay at the forefront of technology, constantly exploring new AI and cloud solutions."
+      description:
+        "We stay at the forefront of technology, constantly exploring new AI and cloud solutions.",
     },
     {
       icon: Shield,
       title: "Reliability",
-      description: "Our clients trust us to deliver secure, scalable solutions that perform when it matters."
+      description:
+        "Our clients trust us to deliver secure, scalable solutions that perform when it matters.",
     },
     {
       icon: Heart,
       title: "Client-Centric",
-      description: "Every project is tailored to meet our clients' unique needs and business objectives."
+      description:
+        "Every project is tailored to meet our clients' unique needs and business objectives.",
     },
     {
       icon: Zap,
       title: "Efficiency",
-      description: "We optimize processes and leverage automation to deliver results faster and more efficiently."
-    }
+      description:
+        "We optimize processes and leverage automation to deliver results faster and more efficiently.",
+    },
   ];
 
   const milestones = [
-    { year: "Aug 2025", event: "Prismora AI founded by three passionate engineers with individual expertise" },
-    { year: "Sep 2025", event: "Launched first AI-powered solution and secured initial clients" },
-    { year: "Oct 2025", event: "Expanded service offerings to include cloud architecture solutions" },
-    { year: "Nov 2025", event: "Reached 5+ successful project deliveries across different domains" },
-    { year: "Dec 2025", event: "Established partnerships and growing client base" },
-    { year: "2026", event: "Scaling AI solutions and expanding market presence" }
+    {
+      year: "Aug 2025",
+      event:
+        "Prismora AI founded by three passionate engineers with individual expertise",
+    },
+    {
+      year: "Sep 2025",
+      event: "Launched first AI-powered solution and secured initial clients",
+    },
+    {
+      year: "Oct 2025",
+      event:
+        "Expanded service offerings to include cloud architecture solutions",
+    },
+    {
+      year: "Nov 2025",
+      event:
+        "Reached 5+ successful project deliveries across different domains",
+    },
+    {
+      year: "Dec 2025",
+      event: "Established partnerships and growing client base",
+    },
+    {
+      year: "2026",
+      event: "Scaling AI solutions and expanding market presence",
+    },
   ];
 
   const technologies = [
@@ -68,7 +98,7 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
     { name: "Web Development", expertise: 90 },
     { name: "Mobile Apps", expertise: 85 },
     { name: "DevOps", expertise: 88 },
-    { name: "Data Analytics", expertise: 82 }
+    { name: "Data Analytics", expertise: 82 },
   ];
 
   return (
@@ -82,19 +112,25 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
             Prismora AI
           </DialogTitle>
           <p className="text-muted-foreground text-lg">
-            Next-generation artificial intelligence company solving real-world problems
+            Next-generation artificial intelligence company solving real-world
+            problems
           </p>
         </DialogHeader>
-        
+
         <div className="space-y-8 mt-6">
           {/* Company Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {companyStats.map((stat) => (
-              <Card key={stat.label} className="text-center bg-background/50 border-border/50">
+              <Card
+                key={stat.label}
+                className="text-center bg-background/50 border-border/50"
+              >
                 <CardContent className="p-4">
                   <stat.icon className="w-8 h-8 text-primary mx-auto mb-2" />
                   <div className="text-2xl font-bold">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -111,9 +147,11 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To harness the power of AI, cloud, and software engineering to create intelligent solutions
-                  for businesses and people — shaping the future with technology. We believe in making
-                  cutting-edge AI accessible and practical for real-world applications.
+                  To harness the power of AI, cloud, and software engineering to
+                  create intelligent solutions for businesses and people —
+                  shaping the future with technology. We believe in making
+                  cutting-edge AI accessible and practical for real-world
+                  applications.
                 </p>
               </CardContent>
             </Card>
@@ -127,8 +165,9 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To solve real-world problems through innovation, technology, and scalable AI-powered solutions.
-                  We envision a future where intelligent systems seamlessly integrate with everyday life,
+                  To solve real-world problems through innovation, technology,
+                  and scalable AI-powered solutions. We envision a future where
+                  intelligent systems seamlessly integrate with everyday life,
                   making complex problems simple to solve.
                 </p>
               </CardContent>
@@ -174,7 +213,9 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
                   <div key={tech.name}>
                     <div className="flex justify-between text-sm mb-2">
                       <span className="font-medium">{tech.name}</span>
-                      <span className="text-muted-foreground">{tech.expertise}%</span>
+                      <span className="text-muted-foreground">
+                        {tech.expertise}%
+                      </span>
                     </div>
                     <Progress value={tech.expertise} className="h-2" />
                   </div>
@@ -230,7 +271,9 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
                 <div className="text-center p-4 border border-border/30 rounded-lg">
                   <div className="text-2xl mb-2">☁️</div>
                   <div className="text-sm font-medium">AWS Partner</div>
-                  <div className="text-xs text-muted-foreground">Select Tier</div>
+                  <div className="text-xs text-muted-foreground">
+                    Select Tier
+                  </div>
                 </div>
                 <div className="text-center p-4 border border-border/30 rounded-lg">
                   <div className="text-2xl mb-2">🔧</div>
@@ -240,12 +283,16 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
                 <div className="text-center p-4 border border-border/30 rounded-lg">
                   <div className="text-2xl mb-2">⚡</div>
                   <div className="text-sm font-medium">Microsoft Azure</div>
-                  <div className="text-xs text-muted-foreground">Solutions Partner</div>
+                  <div className="text-xs text-muted-foreground">
+                    Solutions Partner
+                  </div>
                 </div>
                 <div className="text-center p-4 border border-border/30 rounded-lg">
                   <div className="text-2xl mb-2">🤖</div>
                   <div className="text-sm font-medium">OpenAI</div>
-                  <div className="text-xs text-muted-foreground">API Partner</div>
+                  <div className="text-xs text-muted-foreground">
+                    API Partner
+                  </div>
                 </div>
               </div>
             </CardContent>

@@ -14,17 +14,17 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Update active section based on scroll position
       const sections = ["hero", "about", "services", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const top = element.offsetTop;
           const bottom = top + element.offsetHeight;
-          
+
           if (scrollPosition >= top && scrollPosition < bottom) {
             setActiveSection(section);
             break;

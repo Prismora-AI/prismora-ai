@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +33,7 @@ import {
   Clock,
   MessageCircle,
   Wrench,
-  Activity
+  Activity,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamMemberModal from "@/components/TeamMemberModal";
@@ -39,19 +45,21 @@ export default function Index() {
     name: "",
     email: "",
     phone: "",
-    requirements: ""
+    requirements: "",
   });
-  
+
   const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
   const [isCompanyModalOpen, setIsCompanyModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -91,22 +99,28 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar onNavigate={handleNavigate} />
-      
+
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-20">
+      <section
+        id="hero"
+        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-20"
+      >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/10 animate-pulse-slow"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/5 animate-float"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 animate-gradient bg-300% blur-xl"></div>
         </div>
-        
+
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <Badge variant="outline" className="mb-6 px-4 py-2 text-sm font-medium">
+          <Badge
+            variant="outline"
+            className="mb-6 px-4 py-2 text-sm font-medium"
+          >
             <Zap className="w-4 h-4 mr-2" />
             Future-Ready Technology
           </Badge>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-6 animate-gradient bg-300%">
             Prismora AI
           </h1>
@@ -114,19 +128,19 @@ export default function Index() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Next-generation AI solutions for real-world problems
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={() => handleNavigate("contact")}
               className="group px-8 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
             >
               Get a Free Quote
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
-            <Button 
-              size="lg" 
+
+            <Button
+              size="lg"
               variant="outline"
               onClick={handleCompanyInfoClick}
               className="group px-8 py-6 text-lg font-semibold border-primary/50 hover:bg-primary/10 transition-all duration-300"
@@ -135,28 +149,34 @@ export default function Index() {
               Learn More
             </Button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Bot className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">AI-Powered</h3>
-              <p className="text-sm text-muted-foreground">Advanced AI integration</p>
+              <p className="text-sm text-muted-foreground">
+                Advanced AI integration
+              </p>
             </div>
             <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Cloud className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Cloud-Native</h3>
-              <p className="text-sm text-muted-foreground">Scalable infrastructure</p>
+              <p className="text-sm text-muted-foreground">
+                Scalable infrastructure
+              </p>
             </div>
             <div className="text-center p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 transition-all duration-300">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Secure</h3>
-              <p className="text-sm text-muted-foreground">Enterprise-grade security</p>
+              <p className="text-sm text-muted-foreground">
+                Enterprise-grade security
+              </p>
             </div>
           </div>
         </div>
@@ -170,13 +190,16 @@ export default function Index() {
               <Users className="w-4 h-4 mr-2" />
               About Us
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet Our Founding Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Meet Our Founding Team
+            </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
-              Prismora AI is a next-generation artificial intelligence company founded with a vision to solve real-world problems
-              through innovation, technology, and scalable AI-powered solutions.
+              Prismora AI is a next-generation artificial intelligence company
+              founded with a vision to solve real-world problems through
+              innovation, technology, and scalable AI-powered solutions.
             </p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={handleCompanyInfoClick}
               className="group border-primary/50 hover:bg-primary/10"
             >
@@ -185,7 +208,7 @@ export default function Index() {
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card
               className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
@@ -200,8 +223,12 @@ export default function Index() {
                   />
                 </div>
                 <CardTitle className="text-xl">Vandana Kumari</CardTitle>
-                <CardDescription>Founder & Full Stack AI Engineer</CardDescription>
-                <p className="text-sm text-muted-foreground">B.Tech CSE • Expert in end-to-end AI systems</p>
+                <CardDescription>
+                  Founder & Full Stack AI Engineer
+                </CardDescription>
+                <p className="text-sm text-muted-foreground">
+                  B.Tech CSE • Expert in end-to-end AI systems
+                </p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
@@ -211,7 +238,11 @@ export default function Index() {
                   <Badge variant="secondary">AI Systems</Badge>
                 </div>
                 <div className="text-center">
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="group-hover:bg-primary group-hover:text-primary-foreground"
+                  >
                     View Profile
                     <ChevronRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -233,7 +264,9 @@ export default function Index() {
                 </div>
                 <CardTitle className="text-xl">Shivam Singh</CardTitle>
                 <CardDescription>Co-founder & Cloud Engineer</CardDescription>
-                <p className="text-sm text-muted-foreground">B.Tech CSE • Cloud architecture & DevOps specialist</p>
+                <p className="text-sm text-muted-foreground">
+                  B.Tech CSE • Cloud architecture & DevOps specialist
+                </p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
@@ -243,7 +276,11 @@ export default function Index() {
                   <Badge variant="secondary">DevOps</Badge>
                 </div>
                 <div className="text-center">
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="group-hover:bg-primary group-hover:text-primary-foreground"
+                  >
                     View Profile
                     <ChevronRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -264,8 +301,12 @@ export default function Index() {
                   />
                 </div>
                 <CardTitle className="text-xl">Anshuman Sharma</CardTitle>
-                <CardDescription>Co-founder & Full Stack Engineer</CardDescription>
-                <p className="text-sm text-muted-foreground">MCA • Expert in front-end & back-end systems</p>
+                <CardDescription>
+                  Co-founder & Full Stack Engineer
+                </CardDescription>
+                <p className="text-sm text-muted-foreground">
+                  MCA • Expert in front-end & back-end systems
+                </p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
@@ -275,7 +316,11 @@ export default function Index() {
                   <Badge variant="secondary">TypeScript</Badge>
                 </div>
                 <div className="text-center">
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="group-hover:bg-primary group-hover:text-primary-foreground"
+                  >
                     View Profile
                     <ChevronRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -294,7 +339,9 @@ export default function Index() {
               <Layers className="w-4 h-4 mr-2" />
               Our Services
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">What We Offer</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              What We Offer
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive solutions to power your digital transformation
             </p>
@@ -306,11 +353,14 @@ export default function Index() {
                 <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <Code className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-lg">Web & E-Commerce Development</CardTitle>
+                <CardTitle className="text-lg">
+                  Web & E-Commerce Development
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Modern, responsive websites and e-commerce platforms built with the latest technologies.
+                  Modern, responsive websites and e-commerce platforms built
+                  with the latest technologies.
                 </p>
               </CardContent>
             </Card>
@@ -320,11 +370,14 @@ export default function Index() {
                 <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <Smartphone className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-lg">Mobile App Development</CardTitle>
+                <CardTitle className="text-lg">
+                  Mobile App Development
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Cross-platform mobile applications using Flutter and React Native for iOS and Android.
+                  Cross-platform mobile applications using Flutter and React
+                  Native for iOS and Android.
                 </p>
               </CardContent>
             </Card>
@@ -338,7 +391,8 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Deployment, hosting, and scaling solutions on AWS, GCP, and Azure platforms.
+                  Deployment, hosting, and scaling solutions on AWS, GCP, and
+                  Azure platforms.
                 </p>
               </CardContent>
             </Card>
@@ -352,7 +406,8 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Intelligent chatbots, recommendation systems, and automation powered by AI.
+                  Intelligent chatbots, recommendation systems, and automation
+                  powered by AI.
                 </p>
               </CardContent>
             </Card>
@@ -362,11 +417,14 @@ export default function Index() {
                 <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <Settings className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-lg">Post-Launch Maintenance</CardTitle>
+                <CardTitle className="text-lg">
+                  Post-Launch Maintenance
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Ongoing support, updates, bug fixes, and performance optimization for your applications.
+                  Ongoing support, updates, bug fixes, and performance
+                  optimization for your applications.
                 </p>
               </CardContent>
             </Card>
@@ -376,11 +434,14 @@ export default function Index() {
                 <div className="w-16 h-16 bg-primary/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <MessageSquare className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-lg">Social Media Management</CardTitle>
+                <CardTitle className="text-lg">
+                  Social Media Management
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground text-center">
-                  Complete social media strategy, content creation, and community management for your brand.
+                  Complete social media strategy, content creation, and
+                  community management for your brand.
                 </p>
               </CardContent>
             </Card>
@@ -396,9 +457,12 @@ export default function Index() {
               <Star className="w-4 h-4 mr-2" />
               Our Portfolio
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Project Showcase</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Project Showcase
+            </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Explore our diverse portfolio of successful projects across different industries and technologies.
+              Explore our diverse portfolio of successful projects across
+              different industries and technologies.
             </p>
           </div>
 
@@ -407,22 +471,34 @@ export default function Index() {
             <div className="text-center p-6 rounded-lg bg-green-500/10 border border-green-500/20">
               <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
               <h3 className="font-semibold text-green-400 mb-1">Completed</h3>
-              <p className="text-sm text-muted-foreground">Successfully delivered projects</p>
+              <p className="text-sm text-muted-foreground">
+                Successfully delivered projects
+              </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-blue-500/10 border border-blue-500/20">
               <Activity className="w-8 h-8 text-blue-400 mx-auto mb-3" />
               <h3 className="font-semibold text-blue-400 mb-1">In Progress</h3>
-              <p className="text-sm text-muted-foreground">Currently under development</p>
+              <p className="text-sm text-muted-foreground">
+                Currently under development
+              </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
               <MessageCircle className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
-              <h3 className="font-semibold text-yellow-400 mb-1">In Discussion</h3>
-              <p className="text-sm text-muted-foreground">Requirements being finalized</p>
+              <h3 className="font-semibold text-yellow-400 mb-1">
+                In Discussion
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Requirements being finalized
+              </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-purple-500/10 border border-purple-500/20">
               <Wrench className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-              <h3 className="font-semibold text-purple-400 mb-1">Maintenance</h3>
-              <p className="text-sm text-muted-foreground">Ongoing support & updates</p>
+              <h3 className="font-semibold text-purple-400 mb-1">
+                Maintenance
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Ongoing support & updates
+              </p>
             </div>
           </div>
 
@@ -439,15 +515,22 @@ export default function Index() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">IN PROGRESS</Badge>
-                    <div className="text-sm text-muted-foreground">75% Complete</div>
+                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">
+                      IN PROGRESS
+                    </Badge>
+                    <div className="text-sm text-muted-foreground">
+                      75% Complete
+                    </div>
                   </div>
                   <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                     <div className="text-6xl opacity-50">💰</div>
                   </div>
-                  <CardTitle className="text-xl">AI-Powered Fintech App</CardTitle>
+                  <CardTitle className="text-xl">
+                    AI-Powered Fintech App
+                  </CardTitle>
                   <CardDescription>
-                    Intelligent financial management with AI-driven insights and automated trading recommendations.
+                    Intelligent financial management with AI-driven insights and
+                    automated trading recommendations.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -477,15 +560,22 @@ export default function Index() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">IN PROGRESS</Badge>
-                    <div className="text-sm text-muted-foreground">60% Complete</div>
+                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">
+                      IN PROGRESS
+                    </Badge>
+                    <div className="text-sm text-muted-foreground">
+                      60% Complete
+                    </div>
                   </div>
                   <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🛒</div>
                   </div>
-                  <CardTitle className="text-xl">Custom E-Commerce Platform</CardTitle>
+                  <CardTitle className="text-xl">
+                    Custom E-Commerce Platform
+                  </CardTitle>
                   <CardDescription>
-                    Scalable e-commerce solution with AI-powered product recommendations and advanced analytics.
+                    Scalable e-commerce solution with AI-powered product
+                    recommendations and advanced analytics.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -524,15 +614,22 @@ export default function Index() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-green-500/20 text-green-400 border-green-500/30">COMPLETED</Badge>
-                    <div className="text-sm text-muted-foreground">Dec 2023</div>
+                    <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
+                      COMPLETED
+                    </Badge>
+                    <div className="text-sm text-muted-foreground">
+                      Dec 2023
+                    </div>
                   </div>
                   <div className="w-full h-48 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg mb-4 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🏥</div>
                   </div>
-                  <CardTitle className="text-xl">HealthTracker Mobile App</CardTitle>
+                  <CardTitle className="text-xl">
+                    HealthTracker Mobile App
+                  </CardTitle>
                   <CardDescription>
-                    Comprehensive health monitoring app with AI-powered health insights and telemedicine features.
+                    Comprehensive health monitoring app with AI-powered health
+                    insights and telemedicine features.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -555,15 +652,22 @@ export default function Index() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">MAINTENANCE</Badge>
-                    <div className="text-sm text-muted-foreground">Oct 2023</div>
+                    <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">
+                      MAINTENANCE
+                    </Badge>
+                    <div className="text-sm text-muted-foreground">
+                      Oct 2023
+                    </div>
                   </div>
                   <div className="w-full h-48 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-lg mb-4 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🍽️</div>
                   </div>
-                  <CardTitle className="text-xl">Restaurant Management System</CardTitle>
+                  <CardTitle className="text-xl">
+                    Restaurant Management System
+                  </CardTitle>
                   <CardDescription>
-                    Complete restaurant management solution with online ordering, inventory, and staff management.
+                    Complete restaurant management solution with online
+                    ordering, inventory, and staff management.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -595,15 +699,20 @@ export default function Index() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">IN DISCUSSION</Badge>
+                    <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+                      IN DISCUSSION
+                    </Badge>
                     <div className="text-sm text-muted-foreground">Q2 2024</div>
                   </div>
                   <div className="w-full h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg mb-4 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🤖</div>
                   </div>
-                  <CardTitle className="text-xl">Enterprise AI Chatbot</CardTitle>
+                  <CardTitle className="text-xl">
+                    Enterprise AI Chatbot
+                  </CardTitle>
                   <CardDescription>
-                    Intelligent customer service chatbot with natural language processing and multi-language support.
+                    Intelligent customer service chatbot with natural language
+                    processing and multi-language support.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -624,9 +733,12 @@ export default function Index() {
                 <CardHeader>
                   <div className="w-full h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg mb-4 flex flex-col items-center justify-center">
                     <div className="text-4xl mb-4 opacity-50">💼</div>
-                    <h3 className="text-lg font-semibold mb-2">Your Project Here</h3>
+                    <h3 className="text-lg font-semibold mb-2">
+                      Your Project Here
+                    </h3>
                     <p className="text-sm text-muted-foreground text-center max-w-xs">
-                      Ready to discuss your next innovative project? Let's bring your ideas to life.
+                      Ready to discuss your next innovative project? Let's bring
+                      your ideas to life.
                     </p>
                   </div>
                 </CardHeader>
@@ -653,9 +765,12 @@ export default function Index() {
               <Mail className="w-4 h-4 mr-2" />
               Get in Touch
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Build Something Amazing Together</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Let's Build Something Amazing Together
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Ready to transform your business with cutting-edge technology? Let's talk.
+              Ready to transform your business with cutting-edge technology?
+              Let's talk.
             </p>
           </div>
 
@@ -664,7 +779,9 @@ export default function Index() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">Name</label>
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Name
+                    </label>
                     <Input
                       id="name"
                       name="name"
@@ -676,7 +793,9 @@ export default function Index() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">Email</label>
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email
+                    </label>
                     <Input
                       id="email"
                       name="email"
@@ -689,9 +808,11 @@ export default function Index() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium">Phone</label>
+                  <label htmlFor="phone" className="text-sm font-medium">
+                    Phone
+                  </label>
                   <Input
                     id="phone"
                     name="phone"
@@ -702,9 +823,11 @@ export default function Index() {
                     className="bg-background/50"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <label htmlFor="requirements" className="text-sm font-medium">Project Requirements</label>
+                  <label htmlFor="requirements" className="text-sm font-medium">
+                    Project Requirements
+                  </label>
                   <Textarea
                     id="requirements"
                     name="requirements"
@@ -715,17 +838,26 @@ export default function Index() {
                     required
                   />
                 </div>
-                
-                <Button type="submit" size="lg" className="w-full group bg-primary hover:bg-primary/90">
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full group bg-primary hover:bg-primary/90"
+                >
                   Send Message
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
-              
+
               <div className="mt-8 pt-8 border-t border-border">
                 <div className="text-center">
-                  <p className="text-muted-foreground mb-4">Or reach us directly at:</p>
-                  <a href="mailto:contact@prismora.tech" className="text-primary hover:underline font-medium">
+                  <p className="text-muted-foreground mb-4">
+                    Or reach us directly at:
+                  </p>
+                  <a
+                    href="mailto:contact@prismora.tech"
+                    className="text-primary hover:underline font-medium"
+                  >
                     contact@prismora.tech
                   </a>
                 </div>
@@ -741,17 +873,31 @@ export default function Index() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-6 md:mb-0">
               <h3 className="text-xl font-bold mb-2">Prismora AI</h3>
-              <p className="text-muted-foreground">© 2025 Prismora AI. All rights reserved.</p>
+              <p className="text-muted-foreground">
+                © 2025 Prismora AI. All rights reserved.
+              </p>
             </div>
-            
+
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/20">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/20"
+              >
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/20">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/20"
+              >
                 <Github className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/20">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/20"
+              >
                 <Mail className="w-5 h-5" />
               </Button>
             </div>
