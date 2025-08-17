@@ -755,10 +755,19 @@ export default function Index() {
           setSelectedTeamMember(null);
         }}
       />
-      
+
       <CompanyModal
         isOpen={isCompanyModalOpen}
         onClose={() => setIsCompanyModalOpen(false)}
+      />
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isProjectModalOpen}
+        onClose={() => {
+          setIsProjectModalOpen(false);
+          setSelectedProject(null);
+        }}
       />
     </div>
   );
