@@ -187,24 +187,28 @@ export default function Index() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card 
+            <Card
               className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("ai-developer")}
+              onClick={() => handleTeamMemberClick("vandana-kumari")}
             >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Code className="w-10 h-10 text-primary-foreground" />
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/o/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F2a8699982f7d414dbaeb8564f65c764c?alt=media&token=00d472f7-6abd-4f46-8173-e5633f0f0cbb&apiKey=fb550a76d5404cb7a69d1bb86d052d18"
+                    alt="Vandana Kumari"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Alex Chen</CardTitle>
-                <CardDescription>Full Stack AI Developer</CardDescription>
-                <p className="text-sm text-muted-foreground">Expert in ML, NLP, and AI-powered features</p>
+                <CardTitle className="text-xl">Vandana Kumari</CardTitle>
+                <CardDescription>Founder & Full Stack AI Engineer</CardDescription>
+                <p className="text-sm text-muted-foreground">B.Tech CSE • Expert in end-to-end AI systems</p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
                   <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">TensorFlow</Badge>
-                  <Badge variant="secondary">NLP</Badge>
-                  <Badge variant="secondary">React</Badge>
+                  <Badge variant="secondary">Machine Learning</Badge>
+                  <Badge variant="secondary">Deep Learning</Badge>
+                  <Badge variant="secondary">AI Systems</Badge>
                 </div>
                 <div className="text-center">
                   <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
@@ -215,17 +219,21 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card 
+            <Card
               className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("cloud-developer")}
+              onClick={() => handleTeamMemberClick("shivam-singh")}
             >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Cloud className="w-10 h-10 text-primary-foreground" />
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F5b2182c2135448818e3445b67551da0f?format=webp&width=800"
+                    alt="Shivam Singh"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Sarah Kim</CardTitle>
-                <CardDescription>Cloud Developer</CardDescription>
-                <p className="text-sm text-muted-foreground">Specialist in AWS, GCP, Azure, and deployment</p>
+                <CardTitle className="text-xl">Shivam Singh</CardTitle>
+                <CardDescription>Co-founder & Cloud Engineer</CardDescription>
+                <p className="text-sm text-muted-foreground">B.Tech CSE • Cloud architecture & DevOps specialist</p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
@@ -243,24 +251,28 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card 
+            <Card
               className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("web-developer")}
+              onClick={() => handleTeamMemberClick("anshuman-sharma")}
             >
               <CardHeader className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Layers className="w-10 h-10 text-primary-foreground" />
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2Fd3c34cf38521431e8d0d01bd66c49ae7?format=webp&width=800"
+                    alt="Anshuman Sharma"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <CardTitle className="text-xl">Mike Rodriguez</CardTitle>
-                <CardDescription>Web Developer</CardDescription>
-                <p className="text-sm text-muted-foreground">Skilled in React, Next.js, and modern web platforms</p>
+                <CardTitle className="text-xl">Anshuman Sharma</CardTitle>
+                <CardDescription>Co-founder & Full Stack Engineer</CardDescription>
+                <p className="text-sm text-muted-foreground">MCA • Expert in front-end & back-end systems</p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
                   <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">Node.js</Badge>
+                  <Badge variant="secondary">Full Stack</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">Tailwind</Badge>
                 </div>
                 <div className="text-center">
                   <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
