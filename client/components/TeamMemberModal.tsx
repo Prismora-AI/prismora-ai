@@ -112,12 +112,12 @@ const teamMembers: Record<string, TeamMember> = {
     email: "anshuman@prismora.tech",
     github: "anshuman-sharma",
     linkedin: "anshuman-sharma-dev",
-    bio: "Anshuman is a co-founder of Prismora AI with a Master of Computer Applications (MCA). He is an expert in full-stack development, bridging front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
+    bio: "Anshuman is a co-founder of Prismora AI with a Master of Computer Applications (MCA). With 2 years of individual experience in full-stack development, he bridges front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
     achievements: [
-      "Co-founded Prismora AI",
+      "Co-founded Prismora AI in August 2024",
       "Master of Computer Applications (MCA)",
-      "Expert in full-stack development",
-      "Built 30+ seamless user-centric applications"
+      "2 years of full-stack development experience",
+      "Built 18+ individual full-stack applications"
     ],
     skillLevels: [
       { name: "React", level: 95 },
