@@ -54,12 +54,12 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
   ];
 
   const milestones = [
-    { year: "2019", event: "Company founded with a vision to democratize AI technology" },
-    { year: "2020", event: "Launched our first AI-powered e-commerce platform" },
-    { year: "2021", event: "Expanded to cloud services and reached 50+ successful projects" },
-    { year: "2022", event: "Opened second office and grew team to 10+ specialists" },
-    { year: "2023", event: "Achieved AWS Partner status and launched fintech division" },
-    { year: "2024", event: "Celebrating 150+ projects and expanding AI capabilities" }
+    { year: "Aug 2024", event: "Prismora AI founded by three passionate engineers with individual expertise" },
+    { year: "Sep 2024", event: "Launched first AI-powered solution and secured initial clients" },
+    { year: "Oct 2024", event: "Expanded service offerings to include cloud architecture solutions" },
+    { year: "Nov 2024", event: "Reached 5+ successful project deliveries across different domains" },
+    { year: "Dec 2024", event: "Established partnerships and growing client base" },
+    { year: "2025", event: "Scaling AI solutions and expanding market presence" }
   ];
 
   const technologies = [
