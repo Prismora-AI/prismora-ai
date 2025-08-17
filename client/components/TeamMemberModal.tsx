@@ -41,91 +41,91 @@ interface TeamMemberModalProps {
 }
 
 const teamMembers: Record<string, TeamMember> = {
-  "ai-developer": {
-    id: "ai-developer",
-    name: "Alex Chen",
-    role: "Full Stack AI Developer",
-    description: "Expert in ML, NLP, and AI-powered features",
+  "vandana-kumari": {
+    id: "vandana-kumari",
+    name: "Vandana Kumari",
+    role: "Founder & Full Stack AI Engineer",
+    description: "Expert in building end-to-end AI systems",
     icon: Code,
-    skills: ["Python", "TensorFlow", "NLP", "React", "PyTorch", "OpenAI API"],
+    skills: ["Python", "Machine Learning", "Deep Learning", "AI Systems", "TensorFlow", "PyTorch"],
     experience: "5+ Years",
-    location: "San Francisco, CA",
-    projects: 50,
-    email: "alex.chen@aipoweredsolutions.com",
-    github: "alexchen-ai",
-    linkedin: "alexchen-ml",
-    bio: "Alex is a passionate AI developer with over 5 years of experience in machine learning and natural language processing. He has led the development of multiple AI-powered applications and has a strong background in both frontend and backend technologies.",
+    location: "India",
+    projects: 30,
+    email: "vandana@prismora.tech",
+    github: "vandana-kumari",
+    linkedin: "vandana-kumari-ai",
+    bio: "Vandana is the visionary founder of Prismora AI with a B.Tech in Computer Science & Engineering. She is passionate about building end-to-end AI systems, merging machine learning, deep learning, and software engineering to create impactful solutions that solve real-world problems.",
     achievements: [
-      "Published 3 research papers on NLP",
-      "Led AI integration for 20+ projects",
-      "Certified TensorFlow Developer",
-      "Winner of AI Hackathon 2023"
+      "Founded Prismora AI with innovative vision",
+      "Expert in end-to-end AI system development",
+      "B.Tech in Computer Science & Engineering",
+      "Led development of multiple AI-powered solutions"
     ],
     skillLevels: [
       { name: "Python", level: 95 },
-      { name: "Machine Learning", level: 90 },
-      { name: "React", level: 85 },
-      { name: "TensorFlow", level: 92 },
-      { name: "NLP", level: 88 },
-      { name: "API Development", level: 87 }
+      { name: "Machine Learning", level: 98 },
+      { name: "Deep Learning", level: 95 },
+      { name: "AI Systems", level: 92 },
+      { name: "TensorFlow", level: 90 },
+      { name: "Software Engineering", level: 88 }
     ]
   },
-  "cloud-developer": {
-    id: "cloud-developer",
-    name: "Sarah Kim",
-    role: "Cloud Developer",
-    description: "Specialist in AWS, GCP, Azure, and deployment",
+  "shivam-singh": {
+    id: "shivam-singh",
+    name: "Shivam Singh",
+    role: "Co-founder & Cloud Engineer",
+    description: "Specialist in cloud architecture and DevOps",
     icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "DevOps", "Terraform", "Azure"],
-    experience: "6+ Years",
-    location: "Seattle, WA",
-    projects: 75,
-    email: "sarah.kim@aipoweredsolutions.com",
-    github: "sarahkim-cloud",
-    linkedin: "sarahkim-devops",
-    bio: "Sarah is a cloud infrastructure expert with extensive experience in designing and implementing scalable cloud solutions. She specializes in multi-cloud deployments and has helped numerous startups scale their infrastructure efficiently.",
+    skills: ["AWS", "Docker", "Kubernetes", "DevOps", "Cloud Architecture", "Infrastructure"],
+    experience: "4+ Years",
+    location: "India",
+    projects: 25,
+    email: "shivam@prismora.tech",
+    github: "shivam-singh-cloud",
+    linkedin: "shivam-singh-devops",
+    bio: "Shivam is a co-founder of Prismora AI with a B.Tech in Computer Science & Engineering. He specializes in cloud architecture and DevOps, ensuring Prismora AI solutions are secure, scalable, and future-ready with expertise in modern cloud platforms.",
     achievements: [
-      "AWS Solutions Architect Professional",
-      "Kubernetes Certified Administrator",
-      "Reduced infrastructure costs by 40% for clients",
-      "Built CI/CD pipelines for 100+ projects"
+      "Co-founded Prismora AI",
+      "Expert in cloud architecture design",
+      "B.Tech in Computer Science & Engineering",
+      "Built scalable infrastructure for AI applications"
     ],
     skillLevels: [
-      { name: "AWS", level: 98 },
-      { name: "Kubernetes", level: 92 },
+      { name: "AWS", level: 95 },
+      { name: "Kubernetes", level: 90 },
       { name: "Docker", level: 95 },
-      { name: "Terraform", level: 88 },
-      { name: "DevOps", level: 90 },
-      { name: "Azure", level: 85 }
+      { name: "DevOps", level: 92 },
+      { name: "Cloud Architecture", level: 88 },
+      { name: "Infrastructure", level: 85 }
     ]
   },
-  "web-developer": {
-    id: "web-developer",
-    name: "Mike Rodriguez",
-    role: "Web Developer",
-    description: "Skilled in React, Next.js, and modern web platforms",
+  "anshuman-sharma": {
+    id: "anshuman-sharma",
+    name: "Anshuman Sharma",
+    role: "Co-founder & Full Stack Engineer",
+    description: "Expert in front-end and back-end systems",
     icon: Layers,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind", "Node.js", "GraphQL"],
+    skills: ["React", "Node.js", "Full Stack", "TypeScript", "MongoDB", "API Development"],
     experience: "4+ Years",
-    location: "Austin, TX",
-    projects: 60,
-    email: "mike.rodriguez@aipoweredsolutions.com",
-    github: "mikerod-dev",
-    linkedin: "mikerodriguez-web",
-    bio: "Mike is a frontend specialist who creates beautiful, performant web applications. He has a keen eye for design and user experience, and specializes in modern React ecosystems and performance optimization.",
+    location: "India",
+    projects: 35,
+    email: "anshuman@prismora.tech",
+    github: "anshuman-sharma",
+    linkedin: "anshuman-sharma-dev",
+    bio: "Anshuman is a co-founder of Prismora AI with a Master of Computer Applications (MCA). He is an expert in full-stack development, bridging front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
     achievements: [
-      "Built 40+ production React apps",
-      "Core team member of open-source library",
-      "Speaker at React conferences",
-      "Improved app performance by 60% on average"
+      "Co-founded Prismora AI",
+      "Master of Computer Applications (MCA)",
+      "Expert in full-stack development",
+      "Built 30+ seamless user-centric applications"
     ],
     skillLevels: [
-      { name: "React", level: 96 },
+      { name: "React", level: 95 },
+      { name: "Node.js", level: 92 },
       { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 92 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Performance Optimization", level: 88 },
-      { name: "UI/UX Design", level: 82 }
+      { name: "Full Stack Development", level: 95 },
+      { name: "API Development", level: 88 },
+      { name: "UI/UX Design", level: 85 }
     ]
   }
 };
