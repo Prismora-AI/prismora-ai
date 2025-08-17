@@ -194,7 +194,7 @@ export default function Index() {
               <CardHeader className="text-center">
                 <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
                   <img
-                    src="https://cdn.builder.io/o/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F2a8699982f7d414dbaeb8564f65c764c?alt=media&token=00d472f7-6abd-4f46-8173-e5633f0f0cbb&apiKey=fb550a76d5404cb7a69d1bb86d052d18"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F5dd2de54b2ea40828d7414296ef5ec85?format=webp&width=800"
                     alt="Vandana Kumari"
                     className="w-full h-full object-cover"
                   />
