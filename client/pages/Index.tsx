@@ -26,7 +26,7 @@ import {
   Clock,
   MessageCircle,
   Wrench,
-  Progress as ProgressIcon
+  Activity
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamMemberModal from "@/components/TeamMemberModal";
