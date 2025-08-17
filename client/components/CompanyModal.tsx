@@ -111,9 +111,9 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To empower businesses of all sizes with accessible, scalable AI and cloud solutions 
-                  that drive growth, efficiency, and innovation. We believe technology should be a 
-                  catalyst for success, not a barrier.
+                  To harness the power of AI, cloud, and software engineering to create intelligent solutions
+                  for businesses and people — shaping the future with technology. We believe in making
+                  cutting-edge AI accessible and practical for real-world applications.
                 </p>
               </CardContent>
             </Card>
@@ -127,9 +127,9 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the leading AI-first technology partner that transforms how businesses 
-                  operate in the digital age. We envision a future where AI seamlessly integrates 
-                  with every aspect of business operations.
+                  To solve real-world problems through innovation, technology, and scalable AI-powered solutions.
+                  We envision a future where intelligent systems seamlessly integrate with everyday life,
+                  making complex problems simple to solve.
                 </p>
               </CardContent>
             </Card>
