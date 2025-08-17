@@ -228,7 +228,7 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F5b2182c2135448818e3445b67551da0f?format=webp&width=800"
                     alt="Shivam Singh"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <CardTitle className="text-xl">Shivam Singh</CardTitle>
