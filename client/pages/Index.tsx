@@ -740,8 +740,8 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-6 md:mb-0">
-              <h3 className="text-xl font-bold mb-2">AI Powered Solutions</h3>
-              <p className="text-muted-foreground">© 2024 AI Powered Solutions. All rights reserved.</p>
+              <h3 className="text-xl font-bold mb-2">Prismora AI</h3>
+              <p className="text-muted-foreground">© 2024 Prismora AI. All rights reserved.</p>
             </div>
             
             <div className="flex space-x-4">
