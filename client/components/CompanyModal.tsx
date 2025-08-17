@@ -24,10 +24,10 @@ interface CompanyModalProps {
 
 export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
   const companyStats = [
-    { label: "Projects Completed", value: "150+", icon: Award },
-    { label: "Happy Clients", value: "85+", icon: Heart },
-    { label: "Team Members", value: "12", icon: Users },
-    { label: "Years Experience", value: "5+", icon: Calendar },
+    { label: "AI Solutions Built", value: "25+", icon: Award },
+    { label: "Happy Clients", value: "15+", icon: Heart },
+    { label: "Founding Team", value: "3", icon: Users },
+    { label: "Years Combined Experience", value: "12+", icon: Calendar },
   ];
 
   const coreValues = [
