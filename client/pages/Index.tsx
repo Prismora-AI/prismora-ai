@@ -82,6 +82,11 @@ export default function Index() {
     setIsCompanyModalOpen(true);
   };
 
+  const handleProjectClick = (projectId: string) => {
+    setSelectedProject({ id: projectId });
+    setIsProjectModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar onNavigate={handleNavigate} />
