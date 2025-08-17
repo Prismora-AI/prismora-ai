@@ -85,7 +85,7 @@ const teamMembers: Record<string, TeamMember> = {
     linkedin: "shivam-singh-devops",
     bio: "Shivam is a co-founder of Prismora AI with a B.Tech in Computer Science & Engineering. With 2 years of individual experience in cloud technologies, he specializes in cloud architecture and DevOps, ensuring Prismora AI solutions are secure, scalable, and future-ready.",
     achievements: [
-      "Co-founded Prismora AI in August 2024",
+      "Co-founded Prismora AI in August 2025",
       "2 years of cloud engineering experience",
       "B.Tech in Computer Science & Engineering",
       "Completed 12+ individual cloud projects"
