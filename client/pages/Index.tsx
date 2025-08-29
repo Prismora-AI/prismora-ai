@@ -301,7 +301,7 @@ export default function Index() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardTitle className="text-xl">Anshuman Sharma</CardTitle>
+                <CardTitle className="text-xl">Anshumaan Sharma</CardTitle>
                 <CardDescription>
                   Co-founder & Full Stack Engineer
                 </CardDescription>
