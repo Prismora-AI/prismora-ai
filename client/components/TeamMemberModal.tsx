@@ -216,10 +216,10 @@ export default function TeamMemberModal({
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start" asChild>
-                  <a href={`mailto:${memberData.email}`} aria-label={`Email ${memberData.name}`}>
-                    <Mail className="w-4 h-4 mr-2" />
-                    {memberData.email}
+                <Button variant="outline" size="sm" className="w-full justify-start overflow-hidden min-w-0" asChild>
+                  <a href={`mailto:${memberData.email}`} aria-label={`Email ${memberData.name}`} className="w-full min-w-0">
+                    <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="truncate">{memberData.email}</span>
                   </a>
                 </Button>
                 {githubUrl && (
