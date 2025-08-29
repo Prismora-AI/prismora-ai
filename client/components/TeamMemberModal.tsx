@@ -205,7 +205,7 @@ export default function TeamMemberModal({
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start" asChild>
+                <Button variant="outline" size="sm" className="w-full justify-start whitespace-normal break-all text-left items-start" asChild>
                   <a href={`mailto:${memberData.email}`}>
                     <Mail className="w-4 h-4 mr-2" />
                     {memberData.email}
