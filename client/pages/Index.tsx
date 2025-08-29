@@ -883,26 +883,33 @@ export default function Index() {
             </div>
 
             <div className="flex space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-primary/20"
-              >
-                <Linkedin className="w-5 h-5" />
+              <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20">
+                <a
+                  href="https://www.linkedin.com/company/prismora-ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Prismora AI on LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-primary/20"
-              >
-                <Github className="w-5 h-5" />
+              <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20">
+                <a
+                  href="https://github.com/Prismora-AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Prismora AI on GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:bg-primary/20"
-              >
-                <Mail className="w-5 h-5" />
+              <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20">
+                <a
+                  href="mailto:business@prismora.tech"
+                  aria-label="Email Prismora AI"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
               </Button>
             </div>
           </div>
