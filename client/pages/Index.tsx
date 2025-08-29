@@ -864,7 +864,7 @@ export default function Index() {
                   </p>
                   <a
                     href="mailto:business@prismora.tech"
-                    className="text-primary hover:underline font-medium"
+                    className="text-primary hover:underline font-medium break-all"
                   >
                     business@prismora.tech
                   </a>
