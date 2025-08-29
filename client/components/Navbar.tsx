@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 interface NavbarProps {
   onNavigate: (section: string) => void;
