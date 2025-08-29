@@ -146,11 +146,12 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                 {item.name}
               </button>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 flex items-center gap-2">
+              <ThemeToggle />
               <Button
                 onClick={() => handleNavClick("contact")}
                 size="sm"
-                className="w-full bg-primary hover:bg-primary/90"
+                className="flex-1 bg-primary hover:bg-primary/90"
               >
                 Get Quote
               </Button>
