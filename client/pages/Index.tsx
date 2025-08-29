@@ -459,7 +459,7 @@ export default function Index() {
               3D Showcase
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Project Showcase
+              3D Services Showcase
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Explore our diverse portfolio of successful projects across
