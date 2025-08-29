@@ -466,7 +466,10 @@ export default function Index() {
             </p>
           </div>
 
+          <ServicesShowcase3D />
+
           {/* Project Status Categories */}
+          <div className="hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="text-center p-6 rounded-lg bg-green-500/10 border border-green-500/20">
               <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
@@ -753,6 +756,7 @@ export default function Index() {
                 </CardContent>
               </Card>
             </div>
+          </div>
           </div>
         </div>
       </section>
