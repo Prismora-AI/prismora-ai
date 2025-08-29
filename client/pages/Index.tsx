@@ -456,7 +456,7 @@ export default function Index() {
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
               <Star className="w-4 h-4 mr-2" />
-              Our Portfolio
+              3D Showcase
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Project Showcase
