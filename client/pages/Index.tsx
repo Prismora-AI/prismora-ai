@@ -66,10 +66,10 @@ export default function Index() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", requirements: "" });
+    const subject = `New inquiry from ${formData.name || "Website"}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nProject Requirements:\n${formData.requirements}`;
+    const mailto = `mailto:business@prismora.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
   };
 
   const handleNavigate = (sectionId: string) => {
