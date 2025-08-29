@@ -169,13 +169,13 @@ export default function TeamMemberModal({
   const githubUrl = memberData.github?.startsWith("http")
     ? memberData.github
     : memberData.github
-    ? `https://github.com/${memberData.github}`
-    : undefined;
+      ? `https://github.com/${memberData.github}`
+      : undefined;
   const linkedinUrl = memberData.linkedin?.startsWith("http")
     ? memberData.linkedin
     : memberData.linkedin
-    ? `https://www.linkedin.com/in/${memberData.linkedin}`
-    : undefined;
+      ? `https://www.linkedin.com/in/${memberData.linkedin}`
+      : undefined;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -216,23 +216,52 @@ export default function TeamMemberModal({
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start overflow-hidden min-w-0" asChild>
-                  <a href={`mailto:${memberData.email}`} aria-label={`Email ${memberData.name}`} className="w-full min-w-0">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start overflow-hidden min-w-0"
+                  asChild
+                >
+                  <a
+                    href={`mailto:${memberData.email}`}
+                    aria-label={`Email ${memberData.name}`}
+                    className="w-full min-w-0"
+                  >
                     <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
                     <span className="truncate">{memberData.email}</span>
                   </a>
                 </Button>
                 {githubUrl && (
-                  <Button variant="outline" size="sm" className="w-full justify-start" asChild>
-                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${memberData.name} GitHub`}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                    asChild
+                  >
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${memberData.name} GitHub`}
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </a>
                   </Button>
                 )}
                 {linkedinUrl && (
-                  <Button variant="outline" size="sm" className="w-full justify-start" asChild>
-                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${memberData.name} LinkedIn`}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                    asChild
+                  >
+                    <a
+                      href={linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${memberData.name} LinkedIn`}
+                    >
                       <Linkedin className="w-4 h-4 mr-2" />
                       LinkedIn
                     </a>
@@ -272,7 +301,9 @@ export default function TeamMemberModal({
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
                       <span>{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                      <span className="text-muted-foreground">
+                        {skill.level}%
+                      </span>
                     </div>
                     <Progress value={skill.level} className="h-2" />
                   </div>
