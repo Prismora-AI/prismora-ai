@@ -63,9 +63,9 @@ const teamMembers: Record<string, TeamMember> = {
     experience: "2 Years",
     location: "India",
     projects: 15,
-    email: "vandana@prismora.tech",
-    github: "vandana-kumari",
-    linkedin: "vandana-kumari-ai",
+    email: "vandana.kumari@prismora.tech",
+    github: "https://github.com/vandana-kumari25",
+    linkedin: "https://www.linkedin.com/in/vandanakumari0803/",
     bio: "Vandana is the visionary founder of Prismora AI with a B.Tech in Computer Science & Engineering. With 2 years of individual experience, she is passionate about building end-to-end AI systems, merging machine learning, deep learning, and software engineering to create impactful solutions that solve real-world problems.",
     achievements: [
       "Founded Prismora AI in August 2025",
@@ -99,9 +99,9 @@ const teamMembers: Record<string, TeamMember> = {
     experience: "2 Years",
     location: "India",
     projects: 12,
-    email: "shivam@prismora.tech",
-    github: "shivam-singh-cloud",
-    linkedin: "shivam-singh-devops",
+    email: "shivam.s@prismora.tech",
+    github: "https://github.com/shivamsinghtech",
+    linkedin: "https://www.linkedin.com/in/shivam-singh8757/",
     bio: "Shivam is a co-founder of Prismora AI with a B.Tech in Computer Science & Engineering. With 2 years of individual experience in cloud technologies, he specializes in cloud architecture and DevOps, ensuring Prismora AI solutions are secure, scalable, and future-ready.",
     achievements: [
       "Co-founded Prismora AI in August 2025",
@@ -120,7 +120,7 @@ const teamMembers: Record<string, TeamMember> = {
   },
   "anshuman-sharma": {
     id: "anshuman-sharma",
-    name: "Anshuman Sharma",
+    name: "Anshumaan Sharma",
     role: "Co-founder & Full Stack Engineer",
     description: "Expert in front-end and back-end systems",
     icon: Layers,
@@ -135,10 +135,10 @@ const teamMembers: Record<string, TeamMember> = {
     experience: "2 Years",
     location: "India",
     projects: 18,
-    email: "anshuman@prismora.tech",
-    github: "anshuman-sharma",
-    linkedin: "anshuman-sharma-dev",
-    bio: "Anshuman is a co-founder of Prismora AI with a Master of Computer Applications (MCA). With 2 years of individual experience in full-stack development, he bridges front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
+    email: "anshumaan.s@prismora.tech",
+    github: "https://github.com/itsanshumaansharma",
+    linkedin: "https://www.linkedin.com/in/anshumaan-sharma-b62654237",
+    bio: "Anshumaan is a co-founder of Prismora AI with a Master of Computer Applications (MCA). With 2 years of individual experience in full-stack development, he bridges front-end and back-end systems to deliver seamless, user-centric products that provide exceptional user experiences.",
     achievements: [
       "Co-founded Prismora AI in August 2025",
       "Master of Computer Applications (MCA)",
@@ -165,6 +165,17 @@ export default function TeamMemberModal({
 
   const memberData = teamMembers[member.id] || member;
   const IconComponent = memberData.icon;
+
+  const githubUrl = memberData.github?.startsWith("http")
+    ? memberData.github
+    : memberData.github
+      ? `https://github.com/${memberData.github}`
+      : undefined;
+  const linkedinUrl = memberData.linkedin?.startsWith("http")
+    ? memberData.linkedin
+    : memberData.linkedin
+      ? `https://www.linkedin.com/in/${memberData.linkedin}`
+      : undefined;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -208,29 +219,52 @@ export default function TeamMemberModal({
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full justify-start"
+                  className="w-full justify-start overflow-hidden min-w-0"
+                  asChild
                 >
-                  <Mail className="w-4 h-4 mr-2" />
-                  {memberData.email}
+                  <a
+                    href={`mailto:${memberData.email}`}
+                    aria-label={`Email ${memberData.name}`}
+                    className="w-full min-w-0"
+                  >
+                    <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="truncate">{memberData.email}</span>
+                  </a>
                 </Button>
-                {memberData.github && (
+                {githubUrl && (
                   <Button
                     variant="outline"
                     size="sm"
                     className="w-full justify-start"
+                    asChild
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    {memberData.github}
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${memberData.name} GitHub`}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </a>
                   </Button>
                 )}
-                {memberData.linkedin && (
+                {linkedinUrl && (
                   <Button
                     variant="outline"
                     size="sm"
                     className="w-full justify-start"
+                    asChild
                   >
-                    <Linkedin className="w-4 h-4 mr-2" />
-                    {memberData.linkedin}
+                    <a
+                      href={linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${memberData.name} LinkedIn`}
+                    >
+                      <Linkedin className="w-4 h-4 mr-2" />
+                      LinkedIn
+                    </a>
                   </Button>
                 )}
               </div>

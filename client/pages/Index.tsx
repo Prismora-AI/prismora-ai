@@ -297,11 +297,11 @@ export default function Index() {
                 <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2Fd3c34cf38521431e8d0d01bd66c49ae7?format=webp&width=800"
-                    alt="Anshuman Sharma"
+                    alt="Anshumaan Sharma"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardTitle className="text-xl">Anshuman Sharma</CardTitle>
+                <CardTitle className="text-xl">Anshumaan Sharma</CardTitle>
                 <CardDescription>
                   Co-founder & Full Stack Engineer
                 </CardDescription>
