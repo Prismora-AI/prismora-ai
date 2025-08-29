@@ -89,6 +89,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                 )}
               </button>
             ))}
+            <ThemeToggle />
             <Button
               onClick={() => handleNavClick("contact")}
               size="sm"
