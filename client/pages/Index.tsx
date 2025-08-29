@@ -39,6 +39,7 @@ import Navbar from "@/components/Navbar";
 import TeamMemberModal from "@/components/TeamMemberModal";
 import CompanyModal from "@/components/CompanyModal";
 import ProjectModal from "@/components/ProjectModal";
+import ServicesShowcase3D from "@/components/ServicesShowcase3D";
 
 export default function Index() {
   const [formData, setFormData] = useState({
