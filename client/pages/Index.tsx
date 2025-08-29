@@ -858,7 +858,7 @@ export default function Index() {
                     href="mailto:business@prismora.tech"
                     className="text-primary hover:underline font-medium"
                   >
-                    contact@prismora.tech
+                    business@prismora.tech
                   </a>
                 </div>
               </div>
