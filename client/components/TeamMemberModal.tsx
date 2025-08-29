@@ -205,23 +205,46 @@ export default function TeamMemberModal({
             <div className="bg-background/50 rounded-xl p-6 border border-border/50">
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-3">
-                <Button variant="outline" size="sm" className="w-full justify-start whitespace-normal break-all text-left items-start" asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start whitespace-normal break-all text-left items-start"
+                  asChild
+                >
                   <a href={`mailto:${memberData.email}`}>
                     <Mail className="w-4 h-4 mr-2" />
                     {memberData.email}
                   </a>
                 </Button>
                 {memberData.github && (
-                  <Button variant="outline" size="sm" className="w-full justify-start" asChild>
-                    <a href={memberData.github} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                    asChild
+                  >
+                    <a
+                      href={memberData.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </a>
                   </Button>
                 )}
                 {memberData.linkedin && (
-                  <Button variant="outline" size="sm" className="w-full justify-start" asChild>
-                    <a href={memberData.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                    asChild
+                  >
+                    <a
+                      href={memberData.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Linkedin className="w-4 h-4 mr-2" />
                       LinkedIn
                     </a>
