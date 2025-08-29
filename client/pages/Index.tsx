@@ -462,8 +462,7 @@ export default function Index() {
               3D Services Showcase
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Explore our diverse portfolio of successful projects across
-              different industries and technologies.
+              Interactively explore our core offerings in 3D.
             </p>
           </div>
 
