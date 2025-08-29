@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 interface NavbarProps {
   onNavigate: (section: string) => void;
@@ -41,7 +42,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     { name: "Home", id: "hero" },
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Projects", id: "projects" },
+    { name: "Showcase", id: "projects" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -88,6 +89,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                 )}
               </button>
             ))}
+            <ThemeToggle />
             <Button
               onClick={() => handleNavClick("contact")}
               size="sm"
@@ -144,11 +146,12 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                 {item.name}
               </button>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 flex items-center gap-2">
+              <ThemeToggle />
               <Button
                 onClick={() => handleNavClick("contact")}
                 size="sm"
-                className="w-full bg-primary hover:bg-primary/90"
+                className="flex-1 bg-primary hover:bg-primary/90"
               >
                 Get Quote
               </Button>
