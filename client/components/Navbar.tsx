@@ -41,7 +41,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     { name: "Home", id: "hero" },
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Projects", id: "projects" },
+    { name: "Showcase", id: "projects" },
     { name: "Contact", id: "contact" },
   ];
 

@@ -855,7 +855,7 @@ export default function Index() {
                     Or reach us directly at:
                   </p>
                   <a
-                    href="mailto:contact@prismora.tech"
+                    href="mailto:business@prismora.tech"
                     className="text-primary hover:underline font-medium"
                   >
                     contact@prismora.tech
