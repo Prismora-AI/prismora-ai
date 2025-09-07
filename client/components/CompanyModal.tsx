@@ -224,40 +224,6 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
             </CardContent>
           </Card>
 
-          {/* Company Timeline */}
-          <Card className="bg-background/50 border-border/50">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                Our Journey
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className="flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <div className="w-3 h-3 bg-primary rounded-full"></div>
-                      {index < milestones.length - 1 && (
-                        <div className="w-px h-8 bg-border mt-2"></div>
-                      )}
-                    </div>
-                    <div className="flex-1 pb-4">
-                      <div className="flex items-center gap-3 mb-1">
-                        <Badge variant="secondary" className="text-xs">
-                          {milestone.year}
-                        </Badge>
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {milestone.event}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Certifications & Partnerships */}
           <Card className="bg-background/50 border-border/50">
             <CardHeader>

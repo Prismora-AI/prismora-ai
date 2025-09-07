@@ -192,7 +192,7 @@ export default function Index() {
               About Us
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet Our Founding Team
+              About Our Company
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
               Prismora AI is a next-generation artificial intelligence company
@@ -208,126 +208,6 @@ export default function Index() {
               Learn More About Our Company
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card
-              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("vandana-kumari")}
-            >
-              <CardHeader className="text-center">
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F5dd2de54b2ea40828d7414296ef5ec85?format=webp&width=800"
-                    alt="Vandana Kumari"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardTitle className="text-xl">Vandana Kumari</CardTitle>
-                <CardDescription>
-                  Founder & Full Stack AI Engineer
-                </CardDescription>
-                <p className="text-sm text-muted-foreground">
-                  B.Tech CSE • Expert in end-to-end AI systems
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
-                  <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">Machine Learning</Badge>
-                  <Badge variant="secondary">Deep Learning</Badge>
-                  <Badge variant="secondary">AI Systems</Badge>
-                </div>
-                <div className="text-center">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group-hover:bg-primary group-hover:text-primary-foreground"
-                  >
-                    View Profile
-                    <ChevronRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card
-              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("shivam-singh")}
-            >
-              <CardHeader className="text-center">
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2F5b2182c2135448818e3445b67551da0f?format=webp&width=800"
-                    alt="Shivam Singh"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <CardTitle className="text-xl">Shivam Singh</CardTitle>
-                <CardDescription>Co-founder & Cloud Engineer</CardDescription>
-                <p className="text-sm text-muted-foreground">
-                  B.Tech CSE • Cloud architecture & DevOps specialist
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
-                  <Badge variant="secondary">AWS</Badge>
-                  <Badge variant="secondary">Docker</Badge>
-                  <Badge variant="secondary">Kubernetes</Badge>
-                  <Badge variant="secondary">DevOps</Badge>
-                </div>
-                <div className="text-center">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group-hover:bg-primary group-hover:text-primary-foreground"
-                  >
-                    View Profile
-                    <ChevronRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card
-              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50 cursor-pointer"
-              onClick={() => handleTeamMemberClick("anshuman-sharma")}
-            >
-              <CardHeader className="text-center">
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Ffb550a76d5404cb7a69d1bb86d052d18%2Fd3c34cf38521431e8d0d01bd66c49ae7?format=webp&width=800"
-                    alt="Anshumaan Sharma"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardTitle className="text-xl">Anshumaan Sharma</CardTitle>
-                <CardDescription>
-                  Co-founder & Full Stack Engineer
-                </CardDescription>
-                <p className="text-sm text-muted-foreground">
-                  MCA • Expert in front-end & back-end systems
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Node.js</Badge>
-                  <Badge variant="secondary">Full Stack</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
-                </div>
-                <div className="text-center">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group-hover:bg-primary group-hover:text-primary-foreground"
-                  >
-                    View Profile
-                    <ChevronRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
