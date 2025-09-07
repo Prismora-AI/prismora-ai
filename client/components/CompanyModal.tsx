@@ -224,7 +224,6 @@ export default function CompanyModal({ isOpen, onClose }: CompanyModalProps) {
             </CardContent>
           </Card>
 
-
           {/* Certifications & Partnerships */}
           <Card className="bg-background/50 border-border/50">
             <CardHeader>

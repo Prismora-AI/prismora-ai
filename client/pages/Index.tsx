@@ -209,7 +209,6 @@ export default function Index() {
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-
         </div>
       </section>
 
